@@ -1,0 +1,22 @@
+{
+  "step1": {
+    "section": "Section 5.3.1",
+    "title": "Root Record Issuance",
+    "url": "https://playground.identient.com/spec#section-5.3.1"
+  },
+  "step2": {
+    "section": "Section 5.3.2",
+    "title": "Delegation Hop & Scope Attenuation",
+    "url": "https://playground.identient.com/spec#section-5.3.2"
+  },
+  "step3": {
+    "section": "Section 5.3.3",
+    "title": "Enforcement and Invariant Verification",
+    "url": "https://playground.identient.com/spec#section-5.3.3"
+  },
+  "step4": {
+    "section": "Section 4.4",
+    "title": "Scope Expansion Rules",
+    "url": "https://playground.identient.com/spec#section-4.4"
+  }
+}

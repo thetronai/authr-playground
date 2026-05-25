@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary:    #0a0f1e;   /* near-black navy — main background */
+  --bg-secondary:  #0f172a;   /* slightly lighter — card backgrounds */
+  --bg-tertiary:   #1e293b;   /* code blocks, input fields */
+  --bg-hover:      #263348;   /* hover states */
+
+  --accent:        #6366f1;   /* indigo — primary action color */
+  --accent-light:  #818cf8;   /* lighter indigo — hover, links */
+  --accent-glow:   rgba(99,102,241,0.15); /* glow effect on accent elements */
+
+  --success:       #10b981;   /* emerald — verified, passed */
+  --success-bg:    rgba(16,185,129,0.1);
+  --success-glow:  rgba(16,185,129,0.2);
+
+  --danger:        #ef4444;   /* red — rejected, attack, failed */
+  --danger-bg:     rgba(239,68,68,0.1);
+  --danger-glow:   rgba(239,68,68,0.2);
+
+  --warning:       #f59e0b;   /* amber — HITL pause, drift signals */
+  --warning-bg:    rgba(245,158,11,0.1);
+  --warning-glow:  rgba(245,158,11,0.2);
+
+  --text-primary:  #f1f5f9;   /* near-white — main text */
+  --text-secondary:#94a3b8;   /* slate — labels, metadata */
+  --text-muted:    #475569;   /* dim — placeholders, disabled */
+
+  --border:        #1e293b;   /* card borders */
+  --border-accent: rgba(99,102,241,0.3); /* focused borders */
+
+  --author-color:  #f59e0b;   /* amber — always highlights the Author field */
+  --actor-color:   #38bdf8;   /* sky blue — always highlights the Actor field */
+  --scope-color:   #a78bfa;   /* violet — always highlights scope actions */
+}
+
+@theme {
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-tertiary: var(--bg-tertiary);
+  --color-bg-hover: var(--bg-hover);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border);
+  --color-author: var(--author-color);
+  --color-actor: var(--actor-color);
+  --color-scope: var(--scope-color);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* Custom grid background */
+.grid-bg {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-hover);
+}
+
+/* Custom styles for terminal and boxes */
+.terminal-card {
+  border: 1px solid var(--border);
+  background-color: var(--bg-secondary);
+  transition: all 0.2s ease-in-out;
+}
+
+.terminal-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.glow-btn-accent:hover {
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.glow-btn-success:hover {
+  box-shadow: 0 0 15px var(--success-glow);
+}
+
+.glow-btn-danger:hover {
+  box-shadow: 0 0 15px var(--danger-glow);
+}
